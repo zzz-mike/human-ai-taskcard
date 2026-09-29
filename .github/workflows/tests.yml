@@ -17,3 +17,14 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: python -m unittest discover -s tests -v
+
+  secretary-interface:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test integrations/rhine-secretary/bridge.test.mjs
+      - run: npx --yes --package typescript@5.9.3 tsc --strict --target ES2022 --module commonjs --lib ES2022,DOM,DOM.Iterable --outDir dist/secretary-client-test integrations/rhine-secretary/secretary-client.ts integrations/rhine-secretary/shared-read-pool.ts
+      - run: node integrations/rhine-secretary/client.test.cjs
