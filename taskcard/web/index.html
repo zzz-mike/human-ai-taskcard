@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>人机协作任务卡</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">SHARED EXECUTION STATE</p>
+        <h1>人机协作任务卡</h1>
+        <p class="subtitle">人负责方向与授权，AI 负责执行、核验和续接。</p>
+      </div>
+      <div id="system-state" class="system-state">正在连接本地状态…</div>
+    </header>
+
+    <main>
+      <aside>
+        <div class="aside-title">
+          <span>任务</span>
+          <span id="card-count" class="count">0</span>
+        </div>
+        <div id="card-list" class="card-list"></div>
+      </aside>
+      <section id="detail" class="detail empty">
+        <div>
+          <p class="eyebrow">NO CARD SELECTED</p>
+          <h2>选择一张任务卡</h2>
+          <p>这里显示目标、当前状态、授权边界、执行日志和验收证据。</p>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
+

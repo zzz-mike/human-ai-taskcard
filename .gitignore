@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Local task data and unrelated project artifacts (keep on disk).
+/task-cards/
+/task-card-specs/
+/.task-card-backups/
+/reports/
+/outputs/
+/verification/
+/widget-desktop-fix/
+/build_video_data.mjs
+/tmp/
+/tmp_*
+/node_modules
+
+# Local environments, credentials, and build output.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/

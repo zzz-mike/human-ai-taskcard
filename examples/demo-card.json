@@ -1,0 +1,32 @@
+{
+  "id": "demo-card",
+  "title": "读取并核对示例任务卡",
+  "status": "ready",
+  "purpose": "演示任务卡创建、执行记录、证据登记和完成检查。",
+  "current_state": "示例已准备，尚未核对。",
+  "constraints": [
+    "仅演示本地记录流程，不操作真实业务数据。"
+  ],
+  "resources": [],
+  "autonomy": {
+    "allowed": [
+      "读取示例卡",
+      "记录核对结果"
+    ],
+    "requires_confirmation": [
+      "向外部平台发布内容"
+    ]
+  },
+  "pending_work": [
+    {
+      "id": "work-1",
+      "title": "读取示例卡并核对目标、工作项和验收条件"
+    }
+  ],
+  "acceptance_criteria": [
+    {
+      "id": "accept-1",
+      "description": "通过 show --json 读取任务卡并人工确认必要字段存在。"
+    }
+  ]
+}
